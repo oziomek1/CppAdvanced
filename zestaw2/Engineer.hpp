@@ -21,7 +21,7 @@ public:
         return _bonusRatio;
     }
 
-    virtual void payBonus()
+    virtual void payBonus() override
     {
         std::cout << "Engineer bonus set to " << _bonusRatio *  (_workWeek / 160) * _salary << std::endl;
     }

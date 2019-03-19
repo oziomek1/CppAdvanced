@@ -25,7 +25,7 @@ public:
         return _newClientsNumber;
     }
 
-    virtual void payBonus() {
+    virtual void payBonus() override {
         std::cout << "Seller bonus set to " << (1 * static_cast<float>(_newClientsNumber) / 2) * _bonusRatio * (_workWeek / 160) * _salary << std::endl;
     }
 };

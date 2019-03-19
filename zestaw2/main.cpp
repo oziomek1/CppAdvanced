@@ -34,7 +34,7 @@ T accumulate(Iterator first, Iterator last, T init)
     T sum = init;
     for (; first != last; ++ first)
     {
-        sum += * first;
+        sum += *first;
     }
     return sum;
 };
