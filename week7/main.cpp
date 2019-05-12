@@ -22,6 +22,20 @@ void Runner(F func)
     std::cout << std::chrono::duration<double, std::milli>(stop - start).count() << " time in ms" << std::endl;
 }
 
+
+// 3)
+class Add
+{
+private:
+    int value;
+public:
+    Add(int _value) : value(_value) {}
+    int operator()(int adder) const
+    {
+        return value + adder;
+    }
+};
+
 int main()
 {
 // 1)
@@ -59,6 +73,10 @@ int main()
                       }
                   }
     );
+
+// 3)
+    std::vector<double> vector(1000000, 1);
+    for_each_n(vector.begin(), vector.size(), Add(1));
 
 
 }
